@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chart.js Example</title>
+  <!-- This line loads Chart.js library from the internet -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h2>My Simple Bar Chart</h2>
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <script>
+    // This code creates a bar chart inside the canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',  // Bar chart
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+          label: 'Votes',
+          data: [12, 19, 3, 5, 2],
+          backgroundColor: 'blue'
+        }]
+      },
+      options: {}
+    });
+  </script>
+
+</body>
+</html>
